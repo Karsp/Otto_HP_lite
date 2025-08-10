@@ -45,8 +45,10 @@ Battery voltage: GPIO 39
 ### 💻 Software:
 
 * Visual Studio Code
-* [PlatformIO extension](https://platformio.org/install/ide?install=vscode) (or Arduino extension for VSCode)
-* USB drivers (e.g., CH340 for Arduino Nano clones)
+* - [PlatformIO extension](https://platformio.org/install/ide?install=vscode) (or Arduino extension for VSCode)
+* - USB drivers (e.g., CH340 for Arduino Nano clones)
+* Arduino IDE
+* - [Ottos library](https://github.com/OttoDIY/OttoDIYLib)
 
 ---
 
