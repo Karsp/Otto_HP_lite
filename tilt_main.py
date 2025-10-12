@@ -22,23 +22,32 @@ buzzer.playEmoji("S_happy")
 motor.rightServo.duty(45+ offset)
 motor.leftServo.duty(45- offset)
 sleep(0.1)
+
 motor.rightServo.duty(0)
 motor.leftServo.duty(0)
 motor.rightServo.duty(90+ offset)
 motor.leftServo.duty(90- offset)
 sleep(0.1)
+
 motor.rightServo.duty(0)
 motor.leftServo.duty(0)
+
 ultrasonic.ultrasonicRGB1("ff9900", "ff9900")
+
+
 while True:
     curr = tiltSensor.value()
     currentTime = time.gmtime()
-    print(tilt)
-    print(currentTime[5])
+    print("Tilt count:", tilt)
+    print("Seconds:", currentTime[5])
+
     if prev == (0) and curr == (1):
-        buzzer.playNote(random.randint(100, 800), 125)
+#        buzzer.playNote(random.randint(100, 800), 125)
+        buzzer.playEmoji("S_confused")
         tilt += 5
+        sleep(0.25)
     prev = curr
-    if (255) < tilt:
+    if tilt > 255:
         tilt = 0
     ultrasonic.ultrasonicRGB2(0, 0, tilt)
+    sleep(0.05)  # Short delay to debounce and avoid CPU overload
