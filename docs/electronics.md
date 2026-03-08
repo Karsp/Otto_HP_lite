@@ -22,8 +22,11 @@ While visual block-programming uses the connector numbers, text-based programmin
 | **7** | 33 (ADC) | Analog inputs (Line sensor right, Potentiometer, or Light sensor) |
 | **8** | 27 | Servo angle right |
 | **9** | 15 | Servo angle left |
-| **10** | 13 | Servo wheel left |
-| **11** | 33 | Servo wheel right |
+| **10** | 14 | Servo wheel left |
+| **11** | 13 | Servo wheel right |
+| **Led** | 2 | Built in LED |
+| **Buzzer** | 25 | Buzzer |
+| **Battery** | 39 | Battery |
 
 > **Note:** You can rearrange most of these modularly depending on your application.
 
