@@ -41,3 +41,20 @@ sleep(1)
 # Stop
 left_servo.duty(0)
 right_servo.duty(0)
+
+// Example: Basic Move & Sound (Arduino IDE)
+#include "src/OttoLite.h"
+
+OttoMotor motors;
+OttoBuzzer buzzer(25); // Built-in buzzer pin
+
+void setup() {
+    motors.begin(13, 33); // Wheel servos pins
+    buzzer.playConnect();
+}
+
+void loop() {
+    motors.move(20, 20, 1000); // Move forward for 1s
+    motors.stop();
+    delay(2000);
+}
